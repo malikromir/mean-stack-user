@@ -1,4 +1,5 @@
 module.exports = {
-  database: "mongodb://127.0.0.1:27017/mean-auth",
+  database:
+    "mongodb+srv://romir:romir@cluster0.zoqay.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   secret: "yoursecret",
 };
