@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <span><a [routerLink]="['/']">Mean Stack</a></span>
+  <div class="spacer"></div>
+  <span *ngIf="authService.loggedIn()"
+    ><a [routerLink]="['/dashboard']">Dashboard</a></span
+  >
+  <span *ngIf="authService.loggedIn()"
+    ><a [routerLink]="['/profile']">Profile</a></span
+  >
+  <span *ngIf="!authService.loggedIn()"
+    ><a [routerLink]="['/login']">Login</a></span
+  >
+  <span *ngIf="!authService.loggedIn()"
+    ><a [routerLink]="['/register']">Register</a></span
+  >
+  <span *ngIf="authService.loggedIn()"
+    ><a (click)="onLogoutClick()">Logout</a></span
+  >
+</mat-toolbar>
